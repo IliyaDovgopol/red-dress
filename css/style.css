@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&display=swap');
+body {
+	font-family: 'Playfair Display', serif;
+	font-style: italic;
+	background: url(../img/solid-background-two.jpg);
+	background-size: cover;
+}
+
+.wrapper {
+	margin: 0 auto;
+	max-width: 480px;
+	position: relative;
+	/* border-radius: 20px; */
+	background: rgb(60, 60, 60);
+}
+
+.navbar {
+	background: url(../img/solid-bacground.jpg) center -450px;
+	background-size: cover;
+	position: absolute;
+	width: 100%;
+	height: 65px;
+	z-index: 100;
+	clip-path: polygon(0 0, 100% 0, 59% 100%, 0% 100%);
+	display: flex;
+	align-items: center;
+}
+
+.navbar .navbar__title {
+	margin-left: 8px;
+	font-weight: 600;
+}
+
+.title {
+	color: #FFFFFF;
+	font-size: 36px;
+}
+
+.content {
+	width: 100%;
+}
+
+.cent-content {
+	position: relative;
+	width: 100%;
+	margin-bottom: 35px;
+}
+
+.cent-photo {
+	position: relative;
+	max-width: 100%;
+	max-height: 700px;
+}
+
+.sale-title {
+	font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	font-style: normal;
+	font-weight: 700;
+	position: absolute;
+	left: 0;
+	top: 122px;
+	box-shadow: 0px 0px 25px #62595E;
+	color: #000000;
+	font-size: 48px;
+	background: #fff;
+	padding: 20px 60px 20px 20px;
+	clip-path: polygon(0% 0%, 100% 0, 77% 54%, 100% 100%, 0% 100%);
+}
+
+.content__skills {
+	position: absolute;
+	left: 0;
+	bottom: 35px;
+}
+
+.skills-title {
+	background: url(../img/solid-background-two.jpg);
+	background-size: cover;
+	display: flex;
+	margin-bottom: 20px;
+	padding-right: 10px;
+	color: #000000;
+	text-shadow: none;
+}
+
+.skills-title::before {
+	content: '';
+	background: url(../img/icon-skills.png) center center no-repeat;
+	width: 40px;
+	height: 40px;
+	margin-right: 5px;
+}
+
+.price {
+	font-style: normal;
+	display: flex;
+	align-items: flex-end;
+	justify-content: flex-end;
+	text-align: center;
+	margin-bottom: 65px;
+}
+
+.new-price {
+	background: #FFFFFF;
+	padding: 10px 35px;
+	transform: translateY(16px);
+	clip-path: polygon(19% 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.new-price h3 {
+	font-weight: 700;
+		font-size: 16px;
+	
+		color: #000000;
+}
+
+.new-price h1 {
+	font-weight: 700;
+	font-size: 40px;
+	line-height: 41px;
+
+	color: #000000;
+}
+
+.old-price h3 {
+	font-weight: 400;
+	font-size: 16px;
+
+	color: #626262;
+}
+
+.old-price h1 {
+	font-weight: 400;
+		font-size: 32px;
+		line-height: 43px;
+	text-decoration: line-through;
+		color: #6e6e6e;
+}
+
+svg {
+	margin: 0 18px;
+}
+
+.button {
+	padding-bottom: 55px;
+}
+
+.buy {
+	font-family: 'Playfair Display', serif;
+	font-size: 36px;
+	background: #000;
+	color: rgb(255, 255, 255);
+	border: none;
+	padding: 5px 67px 14px 67px;
+	cursor: pointer;
+	display: block;
+	margin: 0 auto;
+	transition: all 0.3s;
+}
+
+.buy:hover {
+	background: #181818;
+	transform: translateY(-5px);
+	box-shadow: 5px 5px 5px rgba(255, 255, 255, 0.3);
+}
+
+@media (max-width: 390px) {
+	.content__skills {
+		bottom: 20px;
+	}
+	html body .wrapper h1, h1, h3, h4, h5, h6 {
+		font-size: 200%;
+	}
+	.cent-photo {
+		width: 480px;
+	}
+}

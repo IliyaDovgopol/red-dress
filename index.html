@@ -21,7 +21,8 @@
 		<a onclick="poslugy()"><p>ПОСЛУГИ</p></a>
 		<a onclick="process()"><p>ПРОЦЕС</p></a>
 		<a onclick="contact()"><p>КОНТАКТИ</p></a>
-		<button onclick="order()" id="order" class="order">ЗАМОВИТИ ПЕРСОНАЛ</button>
+		<button onclick="changeLang()"  class="language" id="burg-language">EN</button>
+		<button onclick="order()" id="burg-order" class="order">ЗАМОВИТИ ПЕРСОНАЛ</button>
 	</div>
     <my-site-bg-top class="my-site-bg-top" >
         <my-site class="my-site-top" >
@@ -34,10 +35,11 @@
                         <div class="right-navbar">
 							<span onclick="burger()" class="burger"></span>
 							<div class="nav">
-								<a onclick="about()" class="about"><p>ПРО НАС</p></a>
-								<a onclick="poslugy()" class="poslugy"><p>ПОСЛУГИ</p></a>
-								<a onclick="process()" class="process"><p>ПРОЦЕС</p></a>
-								<a onclick="contact()" id="contact"><p>КОНТАКТИ</p></a>
+								<a id="about" onclick="about()" class="about"><p>ПРО НАС</p></a>
+								<a id="poslugy" onclick="poslugy()" class="poslugy"><p>ПОСЛУГИ</p></a>
+								<a id="process" onclick="process()" class="process"><p>ПРОЦЕС</p></a>
+								<a id="contact" onclick="contact()" id="contact"><p>КОНТАКТИ</p></a>
+								<button onclick="changeLang()"  class="language" id="language">EN</button>
 								<button onclick="order()" id="order" class="order">ЗАМОВИТИ ПЕРСОНАЛ</button>
 							</div>
 						</div>
@@ -50,12 +52,12 @@
                         <div class="company-info">
                             <div class="company-info-h1">
                                     <h1>Family happiness</h1>
-                                    <p>Агенція по підбору домашнього персоналу</p>
+                                    <p id="first-text">Агенція по підбору домашнього персоналу</p>
                             </div>
                         </div>
                         <div class="company-about">
                             <div class="vector">
-                                <h2>З нашою допомогою Ви знайдете потрібних Вам людей</h2>
+                                <h2 id="first-cont">З нашою допомогою Ви знайдете потрібних Вам людей</h2>
                                 <div class="number-info">
                                     <a href="tel:+380965030260">+38 (096) 503 02 60</a>
                                     <a href="tel:+380634745024">+38 (063) 474 50 24</a>
@@ -83,18 +85,18 @@
                     </div>
                 </div>
                 <div class="text-content">
-                    <h1>Чому саме ми?</h1>
+                    <h1 id="why">Чому саме ми?</h1>
                     <div class="client">
                         <img src="img/library.svg">
-                        <p>У нас є велика база кваліфікованих спеціалістів</p>
+                        <p id="baza">У нас є велика база кваліфікованих спеціалістів.</p>
                     </div>
                     <div class="search-people">
                         <img src="img/search.p.svg">
-                        <p>Ми підберемо тих чи інших перевірених людей за вашими вимогами та потребами.</p>
+                        <p id="people">Ми підберемо тих чи інших перевірених людей за вашими вимогами та потребами.</p>
                     </div>
                     <div class="security">
                         <img src="img/security.svg">
-                        <p>Ми несемо відповідальність за те, щоб ви були задоволені роботою наших працівників.</p>
+                        <p id="response">Ми несемо відповідальність за те, щоб ви були задоволені роботою наших працівників.</p>
                     </div>
 
                 </div>
@@ -105,35 +107,35 @@
         <div class="my-site-cart">
            <div class="title-cart">
                <div class="title-text-cart">
-                   <h1>Ми підберемо Вам людей у найкоротші терміни</h1>
-                   <p>Ми маємо у своєму розпорядженні всіх домашніх працівників, які можуть Вам знадобитися в домогосподарстві</p>
+                   <h1 id="our-service">Ми підберемо Вам людей у найкоротші терміни</h1>
+                   <p id="peoples">Ми маємо у своєму розпорядженні всіх домашніх працівників, які можуть Вам знадобитися в домогосподарстві</p>
                </div>
            </div>
             <div class="cart-products">
 				<ul id="autoWidth" class="cs-hidden cart-product">
 					<li class="cart first-cart">
 						<img src="img/nannies.png">
-						<h1>Няні</h1>
+						<h1 id="people-one">Няні</h1>
 					</li>
 					<li class="cart second-card">
 						<img src="img/governess.png">
-						<h1>Гувернантки</h1>
+						<h1 id="people-two">Гувернантки</h1>
 					</li>
 					<li class="cart second-card">
 						<img src="img/housekeeper.jpg">
-						<h1>Прибиральниці</h1>
+						<h1 id="people-three">Прибиральниці</h1>
 					</li>
 					<li class="cart third-card">
 						<img src="img/gardener.png">
-						<h1>Садівники</h1>
+						<h1 id="people-four">Садівники</h1>
 					</li>
 					<li class="cart first-cart">
 						<img src="img/driver.jpg">
-						<h1>Водії</h1>
+						<h1 id="people-five">Водії</h1>
 					</li>
 					<li class="cart third-card">
 						<img src="img/cook.jpg">
-						<h1>Кухарі</h1>
+						<h1 id="people-six">Кухарі</h1>
 					</li>
 				</ul>
 			</div>
@@ -144,12 +146,12 @@
             <div class="work-info">
 				<div class="work-information">
 					<div class="work-text-title">
-						<h1>Як триває наш робочий процес?</h1>
+						<h1 id="work">Як триває наш робочий процес?</h1>
 					</div>
-					<div class="work-text">
+					<div id="work-text" class="work-text">
 						<p>Бажаєте знайти <b>доглядальницю, няню, покоївку</b>  чи інших помічників? Компанія "Family Happiness" надає персоналізований підхід до кожного замовника.</p>
 					</div>
-					<button class="work-button">
+					<button id="details" class="work-button">
 						Всі деталі
 					</button>
 				</div>
@@ -157,22 +159,22 @@
                     <div class="work-box">
 						<img class="work-picture" src="img/work.img1.jpg">
 						<span></span>
-						<p>Ви залишаєте заявку</p>
+						<p id="step-one">Ви залишаєте заявку</p>
 					</div>
                     <div class="work-box">
 						<img class="work-picture" src="img/work.img2.jpg">
 						<span></span>
-						<p>Проводимо зустріч</p>
+						<p id="step-two">Проводимо зустріч</p>
 					</div>
                     <div class="work-box">
 						<img class="work-picture" src="img/work.img3.jpg">
 						<span></span>
-						<p>Випробувальний термін</p>
+						<p id="step-three">Випробувальний термін</p>
 					</div>
                     <div class="work-box">
 						<img class="work-picture" src="img/work.img4.jpg">
 						<span></span>
-						<p>Підписуємо договір</p>
+						<p id="step-four">Підписуємо договір</p>
 					</div>
 					<div class="work-circle">
 						<img src="img/circule2.svg">
@@ -197,14 +199,14 @@
 					<img class="square" src="img/square.svg" alt="">
 				</div>
 				<div class="person-info">
-					<h1 class="person-title">Ім'я та Фамілія</h1>
-					<p class="person-text person-text__first">Засновник організації "Family happiness"</p>
-					<p class="person-text">Вивчав HRM (управління людськими ресурсами) в Kyiv-Mohyla Business School (kmbs)</p>
-					<p class="person-text">6 років досвіду роботи HR-директором у великих національних і закордонних компаніях</p>
-					<p class="person-text">З 2008 р спеціалізується на питаннях управління домашнім господарством</p>
+					<h1 id="pers-title" class="person-title">Ім'я та Фамілія</h1>
+					<p id="pers-text-one" class="person-text person-text__first">Засновник організації "Family happiness"</p>
+					<p id="pers-text-two" class="person-text">Вивчав HRM (управління людськими ресурсами) в Kyiv-Mohyla Business School (kmbs)</p>
+					<p id="pers-text-three" class="person-text">6 років досвіду роботи HR-директором у великих національних і закордонних компаніях</p>
+					<p id="pers-text-four" class="person-text">З 2008 р спеціалізується на питаннях управління домашнім господарством</p>
 				</div>
 				<div class="slider-person cart-slider-button">
-					<button class="work-button">
+					<button id="about-us" class="work-button">
 						Про нас
 					</button>
 			   </div>
@@ -212,24 +214,24 @@
 		</div>
 	</my-site-bg-team>
 	<my-site-bg-order class="my-site-bg-order"  id="contacts">
-		<h2 class="title-order-form">Зв'яжіться з нами</h2>
+		<h2 id="title-order" class="title-order-form">Зв'яжіться з нами</h2>
 		<div class="form-section">
 		<div class="form">
-			<h3 class="order-title">
+			<h3 id="order-title" class="order-title">
 				Залиште заявку
 			</h3>
 			<form action="sender.php" method="post">
-				<h3>Я шукаю персонал</h3>
-				<input type="text" class="name" name="name" placeholder="Ім'я*" required>
-				<input type="text" class="phone" name="phone" placeholder="Телефон*"required>
-				<input type="email" name="email" placeholder="Email">
-				<button type="button" class="send-form">Відправити</button>
+				<h3 id="form-title">Я шукаю персонал</h3>
+				<input id="form-name" type="text" class="name" name="name" placeholder="Ім'я*" required>
+				<input id="form-phone" type="text" class="phone" name="phone" placeholder="Телефон*"required>
+				<input id="form-email" type="email" name="email" placeholder="Email">
+				<button id="send-button" type="button" class="send-form">Відправити</button>
 				<div class="status"></div>
 			</form>
 		</div>
 		<div class="form-section__more">
 			<div class="social-media">
-				<h3 class="order-title">
+				<h3 id="social-media" class="order-title">
 					Ми в соціальних мережах
 				</h3>
 				<div class="social-media__list">
@@ -239,7 +241,7 @@
 				</div>
 			</div>
 			<div class="tel">
-				<h3 class="order-title">
+				<h3 id="call-us" class="order-title">
 					Телефонуйте нам
 				</h3>
 				<div class="social-media__list">
@@ -248,7 +250,7 @@
 				</div>
 			</div>
 			<div class="gmail">
-				<h3 class="order-title">
+				<h3 id="text-us" class="order-title">
 					Пишіть
 				</h3>
 				<div class="social-media__list">
@@ -258,7 +260,7 @@
 		</div>
 		</div>
 	</my-site-bg-order>
-	<footer>
+	<div class="footer"></div>
 		<div class="footer" id="box">
 			<div class="footer-info">
 				<div class="footer-top">
@@ -267,18 +269,18 @@
 						<div class="footer-left__info">
 							<p>Go digital with us</p>
 							<span>50 Raya Building</span>
-							<a href="tel:+#########">Подзвоніть нам: 38-012-345-67-89</a>
+							<a id="phone-num" href="tel:+#########">Подзвоніть нам: 38-012-345-67-89</a>
 						</div>
 					</div>
 					<div class="footer-right">
 						<div class="footer-list list-one">
-							<h3 class="list-title">Компанія</h3>
-							<a href="#">Контакти</a>
-							<a href="#">Про нас</a>
-							<a href="#">Блог</a>
+							<h3 id="company" class="list-title">Компанія</h3>
+							<a id="list-contacts" href="#">Контакти</a>
+							<a id="list-about" href="#">Про нас</a>
+							<a id="list-blog" href="#">Блог</a>
 						</div>
 						<div class="footer-list list-two">
-							<h3 class="list-title">Соцмережі</h3>
+							<h3 id="footer-social" class="list-title">Соцмережі</h3>
 							<a href="#">Facebook</a>
 							<a href="#">Instagram</a>
 							<a href="#">Twitter</a>
